@@ -1,0 +1,107 @@
+/* COLOR PALETTE
+Dark purple: #421b51;
+Light purple: #d8bfd8;
+Green: #66cd00;
+Light green: #b2e67f;
+Blue (buttons): #3399cc;
+Dark Grey (borders): #7f7f7f;
+ */
+
+
+
+
+/* FONTS */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Georgia", Times, Times New Roman, serif;
+  margin: 20px;
+  color: #333;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 25px;
+}
+
+hr {
+  max-width: 95%;
+  font-weight: 900;
+}
+
+p {
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  margin: 20px;
+  font-size: 16px;
+}
+
+/* BODY STYLES */
+body {
+  background-color: #d8bfd8;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.container .jumbotron {
+    border-radius: 0px;
+}
+
+.shadowcontainer{
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22) !important;
+}
+
+.jumbotron, .triviaboard {
+    border: 2px solid #7f7f7f;
+}
+
+.panel{
+    border: none;
+}
+
+.triviaboard {
+    border-top: none;
+}
+
+.jumbotron {
+  background-color: #b2e67f;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  border: 2px solid #7f7f7f;
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  color: #421b51;
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 9em;
+}
+
+.panel-body {
+    text-align: center;
+}
+
+.gameboard {
+  background-color: #f6f6f6;
+}
+
+.lowpadding {
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 50%;
+  float: left;
+}
+
+.panel-body {
+  padding: 0px;
+}
+
+.winlossmessage h1 {
+  font-size: 22px;
+  margin: 0px 0px 20px 20px;
+}
