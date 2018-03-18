@@ -42,6 +42,11 @@ body {
   background-color: #d8bfd8;
 }
 
+img {
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
 .container {
   padding-top: 20px;
 }
@@ -95,6 +100,16 @@ body {
   max-width: 100%;
   display: inline-block;
   padding: 40px;
+}
+
+.answers {
+  padding: 10px;
+}
+
+.answers:hover {
+    color: #fff;
+    background-color: #421b51;
+    cursor: pointer;
 }
 
 .lowpadding {

@@ -3,10 +3,12 @@
 // correct answer
 // Question image
 
-// VARIABLES
+// GLOBAL VARIABLES
 // ==================================================================================
 
 var counter = 10;
+var wrongAnswers = 0;
+var correctAnswers = 0;
 var questions = [
   {
     question: "This orchid is commonly referred to as the _______ Orchid",
@@ -16,8 +18,8 @@ var questions = [
       "Pancake Orchid",
       "Owl Orchid"
     ],
-    correctAnswer: "Moth Orcchid",
-    questionImage: "./assets/images/phalaenopsis_orchid.jpg"
+    correctAnswer: "Moth Orchid",
+    questionImage: "<img src='./assets/images/phalaenopsis_orchid.jpg'>" 
   },
   {
     question:
@@ -29,7 +31,7 @@ var questions = [
       "Leafless Orchid"
     ],
     correctAnswer: "Ghost Orchid",
-    questionImage: "./assets/images/ghost_orchid.jpg"
+    questionImage: "<img src='./assets/images/ghost_orchid.jpg'>"
   }
 ];
 
@@ -49,7 +51,7 @@ function gameTimer() {
     document.getElementById("timer").innerHTML = "Time remaining:  " + counter;
 
     if (counter === 0) {
-      timeExpired();
+    //   timeExpired();
       // console.log("HAPPY NEW YEAR!!");
       clearInterval(countdown);
     }
@@ -58,6 +60,13 @@ function gameTimer() {
 
 function timeExpired() {
   document.getElementById("question").innerHTML = "Times up!";
+  document.getElementById("allAnswers").style.display = "none";
+  document.getElementById("correctAnswer").innerHTML = "The correct answer was:  " + questions[0].correctAnswer;
+  document.getElementById("imageArea").innerHTML = questions[0].questionImage;
+}
+
+function answerCheck() {
+    
 }
 
 // WORKFLOW
@@ -65,7 +74,6 @@ function timeExpired() {
 
 // Timer Loop
 gameTimer();
-timeExpired();
 
 // Question Loop
 document.getElementById("question").innerHTML = questions[0].question;
