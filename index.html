@@ -18,18 +18,23 @@
       <div class="row">
         <div class="col-md-12">
           <div class="shadowcontainer">
-          <div class="jumbotron">
-            <h1>Trivia</h1>
-          </div>
+            <div class="jumbotron">
+              <h1>null</h1>
+            </div>
             <div class="panel panel-default">
               <div class="triviaboard panel-body">
-                <h4 class="instructions">INSTRUCTIONS</h4>
-                <p>You will be given a random number at the start of the game.</p>
-                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
-                  total score.</p>
+                <div class="gameboard panel-body">
+
+                  <div id="hideStart" style="display: inline">
+                    <p>Are you an orchid expert?</p>
+                    <p>Take this 10 question quiz to test yourself!</p>
+                    <button type="button" id="startButton" class="btn btn-primary" onclick="startGame()">Start Game</button>
+                  </div>
+
+                </div>
               </div>
             </div>
-        </div>
+          </div>
         </div>
       </div>
   </main>
@@ -37,7 +42,7 @@
   <!-- Javascipt -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="./assets/javascript/game.js"></script>
+  <script src="./assets/javascript/app.js"></script>
 
 </body>
 
