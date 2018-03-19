@@ -32,10 +32,11 @@
                   </div>
 
                   <div id="questionBoard" style="display: none">
-                    <div class="timer" id="timerArea"></div>
+                    <div class="timer" id="timerArea"><h2>Time remaining: 10</h2></div>
                     <hr>
                     <div class="question" id="questionArea"></div>
-
+                    <br>
+                    <button type="button" id="startButton" class="btn btn-primary" onclick="endGame()">Submit</button>
 
                     
                     <!-- <div class="allAnswersstyling" id="allAnswers" style="display: inline">
@@ -44,6 +45,15 @@
                     <div class="answers" id="answer3" onclick="checkAnswer()"></div>
                     <div class="answers" id="answer4" onclick="checkAnswer()"></div> -->
                   </div>
+
+                    <div id="endGameStats" style="display: none">
+
+                      <h2 id="correctStats">Total correct answers: </h2>
+                      <br>
+                      <h2 id="incorrectStats">Total incorrect answers:</h2>
+
+
+                     </div>
 
                     <div class="correctanswerstyling" id="correctAnswer"></div>
 
