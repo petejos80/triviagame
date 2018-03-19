@@ -7,8 +7,8 @@
 // ==================================================================================
 
 var counter = 10;
-var wrongAnswers = 0;
-var correctAnswers = 0;
+var incorrectCounter = 0;
+var correctCounter= 0;
 var questions = [
   {
     question: "This orchid is commonly referred to as the _______ Orchid",
@@ -65,9 +65,10 @@ function timeExpired() {
   document.getElementById("imageArea").innerHTML = questions[0].questionImage;
 }
 
-function answerCheck() {
-    
-}
+// function checkAnswer() {
+//     if (this.questions.correctAnswer ===)
+
+// }
 
 // WORKFLOW
 // ===================================================================================
