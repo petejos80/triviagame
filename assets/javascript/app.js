@@ -7,8 +7,6 @@
 // ==================================================================================
 
 var counter = 10;
-var incorrectCounter = 0;
-var correctCounter = 0;
 var questions = [
   {
     question: "The most popular orchid genus, often grown as houseplants, are commonly reffered to as what?",
@@ -117,51 +115,61 @@ function startGame() {
 }
 
 function endGame() {
+  var incorrectCounter = 0;
+  var correctCounter = 0;
   $.each($('input[name="question-0]:checked"'),function(){
     if($(this).val()==questions[0].correctAnswer){
       correctCounter++;
+      console.log("banana");
     } else {
-      incorrectAnswer++;
+      incorrectCounter++;
       }
-  })
+  });
   $.each($('input[name="question-1]:checked"'),function(){
     if($(this).val()==questions[1].correctAnswer){
       correctCounter++;
     } else {
-      incorrectAnswer++;
+      incorrectCounter++;
       }
   });
   $.each($('input[name="question-2]:checked"'),function(){
     if($(this).val()==questions[2].correctAnswer){
       correctCounter++;
     } else {
-      incorrectAnswer++;
+      incorrectCounter++;
       }
   });
   $.each($('input[name="question-3]:checked"'),function(){
     if($(this).val()==questions[3].correctAnswer){
       correctCounter++;
     } else {
-      incorrectAnswer++;
+      incorrectCounter++;
       }
   });
   $.each($('input[name="question-4]:checked"'),function(){
     if($(this).val()==questions[4].correctAnswer){
       correctCounter++;
     } else {
-      incorrectAnswer++;
+      incorrectCounter++;
       }
   });
 
-  // Display game statistics
+  $("#correctStats").append("<h2>"+correctCounter+"</h2>");
+  $("#incorrectStats").append("<h2>"+incorrectCounter+"</h2>");
+
   document.getElementById("questionBoard").style.display = "none";
   document.getElementById("endGameStats").style.display = "inline";
+};
 
-  $("#correctstats").append("<h2>"+correctCounter+"</h2>");
-  $("#incorrectStats").append("<h2>"+incorrectCounter+"</h2>");
+//   // Display game statistics
+//   document.getElementById("questionBoard").style.display = "none";
+//   document.getElementById("endGameStats").style.display = "inline";
+
+//   $("#correctStats").append("<h2>"+correctCounter+"</h2>");
+//   $("#incorrectStats").append("<h2>"+incorrectCounter+"</h2>");
   
 
-}
+// }
 
 
 
