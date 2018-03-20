@@ -19,7 +19,7 @@ var questions = [
       "Pancake Orchids",
       "Owl Orchids"
     ],
-    correctAnswer: "Moth Orchid",
+    correctAnswer: "Moth Orchids",
     questionImage: "<img src='./assets/images/phalaenopsis_orchid.jpg'>" 
   },
   {
@@ -55,19 +55,19 @@ var questions = [
       "Myrmecophila tibicinis",
       "Angraecum sesquipedale"
     ],
-    correctAnswer: "Ghost Orchid",
+    correctAnswer: "Angraecum sesquipedale",
     questionImage: "<img src='./assets/images/angraecum_veitchii.jpg'>"
   },
   {
     question:
       "This orchid genus attracts pollinators (male bees) by producing a flower that mimics both the scent and appearance of female bees",
     answers: [
-      "Ghost Orchid",
-      "Nightshade Orchid",
-      "Dancing Lady Orchid",
-      "Leafless Orchid"
+      "Ophrys",
+      "Catteleya",
+      "Phalaenopsis",
+      "Angraecum"
     ],
-    correctAnswer: "Ghost Orchid",
+    correctAnswer: "Ophrys",
     questionImage: "<img src='./assets/images/ghost_orchid.jpg'>"
   },
 
@@ -75,10 +75,6 @@ var questions = [
 
 // FUNCTIONS
 // ===================================================================================
-
-function startGame() {
-
-}
 
 function gameTimer() {
   var counter = 10;
