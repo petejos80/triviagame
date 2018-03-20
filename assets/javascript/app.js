@@ -116,9 +116,6 @@ function startGame() {
 function endGame() {
   var correct = 0;
   var incorrect = 0;
-  
-  $("#correctStats").append("<h2>"+correct+"</h2>");
-  $("#incorrectStats").append("<h2>"+incorrect+"</h2>");
 
   document.getElementById("questionBoard").style.display = "none";
   document.getElementById("endGameStats").style.display = "inline";
@@ -171,6 +168,10 @@ $.each($('input[name="question-4"]:checked'),function(){
     incorrect++;
   }
     });
+
+    $("#correctStats").append("<h2>"+correct+"</h2>");
+    $("#incorrectStats").append("<h2>"+incorrect+"</h2>");
+
   }
 
 
@@ -179,83 +180,83 @@ $.each($('input[name="question-4"]:checked'),function(){
 
 
 
-function gamePlay() {
+// function gamePlay() {
 
-    if($('input[name="question-2"]:checked')==questions[2].correctAnswer){
-      console.log('bananas');
-      correct++;
-    } else {
-      console.log("nobananas");
-      incorrect++;
-    }
+//     if($('input[name="question-2"]:checked')==questions[2].correctAnswer){
+//       console.log('bananas');
+//       correct++;
+//     } else {
+//       console.log("nobananas");
+//       incorrect++;
+//     }
 
 
-  $.each($('input[name="question-0"]:checked'),function(){
-    if($(this).val()==questions[0].correctAnswer){
-      console.log('bananas');
-      correct++;
-    } else {
-      incorrect++;
-    }
-      });
-  $.each($('input[name="question-1"]:checked'),function(){
-    if($(this).val()==questions[1].correctAnswer){
-      correct++;
-    } else {
-      incorrect++;
-    }
-      });
-  $.each($('input[name="question-2"]:checked'),function(){
-    if($(this).val()==questions[2].correctAnswer){
-      correct++;
-    } else {
-      incorrect++;
-    }
-      });
-  $.each($('input[name="question-3"]:checked'),function(){
-    if($(this).val()==questions[3].correctAnswer){
-      correct++;
-    } else {
-      incorrect++;
-    }
-      });
-  $.each($('input[name="question-4"]:checked'),function(){
-    if($(this).val()==questions[4].correctAnswer){
-      correct++;
-    } else {
-      incorrect++;
-    }
-      });
-    }
+//   $.each($('input[name="question-0"]:checked'),function(){
+//     if($(this).val()==questions[0].correctAnswer){
+//       console.log('bananas');
+//       correct++;
+//     } else {
+//       incorrect++;
+//     }
+//       });
+//   $.each($('input[name="question-1"]:checked'),function(){
+//     if($(this).val()==questions[1].correctAnswer){
+//       correct++;
+//     } else {
+//       incorrect++;
+//     }
+//       });
+//   $.each($('input[name="question-2"]:checked'),function(){
+//     if($(this).val()==questions[2].correctAnswer){
+//       correct++;
+//     } else {
+//       incorrect++;
+//     }
+//       });
+//   $.each($('input[name="question-3"]:checked'),function(){
+//     if($(this).val()==questions[3].correctAnswer){
+//       correct++;
+//     } else {
+//       incorrect++;
+//     }
+//       });
+//   $.each($('input[name="question-4"]:checked'),function(){
+//     if($(this).val()==questions[4].correctAnswer){
+//       correct++;
+//     } else {
+//       incorrect++;
+//     }
+//       });
+//     }
 
-//   // Display game statistics
-//   document.getElementById("questionBoard").style.display = "none";
-//   document.getElementById("endGameStats").style.display = "inline";
+// //   // Display game statistics
+// //   document.getElementById("questionBoard").style.display = "none";
+// //   document.getElementById("endGameStats").style.display = "inline";
 
-//   $("#correctStats").append("<h2>"+correctCounter+"</h2>");
-//   $("#incorrectStats").append("<h2>"+incorrectCounter+"</h2>");
+// //   $("#correctStats").append("<h2>"+correctCounter+"</h2>");
+// //   $("#incorrectStats").append("<h2>"+incorrectCounter+"</h2>");
   
 
-// }
+// // }
 
 
 
-// function timeExpired() {
-//   document.getElementById("question").innerHTML = "Times up!";
-//   document.getElementById("allAnswers").style.display = "none";
-//   document.getElementById("correctAnswer").innerHTML = "The correct answer was:  " + questions[i].correctAnswer;
-//   document.getElementById("imageArea").innerHTML = questions[i].questionImage;
-// }
+// // function timeExpired() {
+// //   document.getElementById("question").innerHTML = "Times up!";
+// //   document.getElementById("allAnswers").style.display = "none";
+// //   document.getElementById("correctAnswer").innerHTML = "The correct answer was:  " + questions[i].correctAnswer;
+// //   document.getElementById("imageArea").innerHTML = questions[i].questionImage;
+// // }
 
-// function checkAnswer() {
-//     if (this.questions.correctAnswer ===)
+// // function checkAnswer() {
+// //     if (this.questions.correctAnswer ===)
 
-// }
+// // }
 
-// WORKFLOW
-// ===================================================================================
+// // WORKFLOW
+// // ===================================================================================
 
-// Timer Loop
+// // Timer Loop
 
 
 
