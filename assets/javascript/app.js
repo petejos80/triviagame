@@ -134,6 +134,15 @@ var incorrect = 0;
 
 function gamePlay() {
 
+    if($("#questionArea").attr('input[name="question-2"]:checked')==questions[2].correctAnswer){
+      console.log('bananas');
+      correct++;
+    } else {
+      console.log("nobananas");
+      incorrect++;
+    }
+
+
   $.each($('input[name="question-0"]:checked'),function(){
     if($(this).val()==questions[0].correctAnswer){
       console.log('bananas');
