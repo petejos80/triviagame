@@ -169,8 +169,10 @@ $.each($('input[name="question-4"]:checked'),function(){
   }
     });
 
-    $("#correctStats").append("<h2>"+correct+"</h2>");
-    $("#incorrectStats").append("<h2>"+incorrect+"</h2>");
+    var totalIncorrect = (5-correct);
+
+    $("#correctStats").html("<h2> Correct Answers: </br> <hr>"+correct+"</h2>");
+    $("#incorrectStats").html("<h2> Incorrect Answers: </br> <hr>"+totalIncorrect+"</h2>");
 
   }
 
