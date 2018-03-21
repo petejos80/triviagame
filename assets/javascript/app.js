@@ -1,15 +1,7 @@
-// Question
-// Answers
-// correct answer
-// Question image
-
 // GLOBAL VARIABLES
 // ==================================================================================
 
-var incorrectCounter = 0;
-var correctCounter = 0;
-
-var counter = 10;
+// List questions
 var questions = [
   {
     question: "The most popular orchid genus, often grown as houseplants, are commonly reffered to as what?",
@@ -50,8 +42,8 @@ var questions = [
     question:
       "This orchid, commonly known as 'Darwin's Orchid', is pollinated exclusively by a species of moth with a 12' proboscis",
     answers: [
-      "Ghost Orchid",
-      "Nightshade Orchid",
+      "Laelia anceps",
+      "Brassabola nodosa",
       "Myrmecophila tibicinis",
       "Angraecum sesquipedale"
     ],
@@ -77,15 +69,14 @@ var questions = [
 // ===================================================================================
 
 function gameTimer() {
-  var counter = 10;
+  var counter = 30;
   var countdown = setInterval(function() {
     console.log(counter);
     counter--;
     document.getElementById("timerArea").innerHTML = "<h2> Time remaining:  " + counter + "</h2>";
 
     if (counter === 0) {
-    //   timeExpired();
-      // console.log("HAPPY NEW YEAR!!");
+    // If time has expired, then...
       clearInterval(countdown);
       endGame();
     }
@@ -114,21 +105,17 @@ function startGame() {
 }
 
 function endGame() {
+  
+  // Define variables for incorrect vs. correct answers
   var correct = 0;
   var incorrect = 0;
 
+  // Display results statistics area
   document.getElementById("questionBoard").style.display = "none";
   document.getElementById("endGameStats").style.display = "inline";
 
-  // if($('input[name="question-2"]:checked')==questions[2].correctAnswer){
-  //   console.log('bananas');
-  //   correct++;
-  // } else {
-  //   console.log("nobananas");
-  //   incorrect++;
-  // }
-
-$.each($('input[name="question-0"]:checked'),function(){
+  // Check the right/wrong status of each answer
+  $.each($('input[name="question-0"]:checked'),function(){
   if($(this).val()==questions[0].correctAnswer){
     console.log('bananas0');
     correct++;
@@ -136,6 +123,7 @@ $.each($('input[name="question-0"]:checked'),function(){
     incorrect++;
   }
     });
+    
 $.each($('input[name="question-1"]:checked'),function(){
   if($(this).val()==questions[1].correctAnswer){
     console.log('bananas1');
@@ -144,6 +132,7 @@ $.each($('input[name="question-1"]:checked'),function(){
     incorrect++;
   }
     });
+
 $.each($('input[name="question-2"]:checked'),function(){
   if($(this).val()==questions[2].correctAnswer){
     console.log('bananas2');
@@ -152,6 +141,7 @@ $.each($('input[name="question-2"]:checked'),function(){
     incorrect++;
   }
     });
+
 $.each($('input[name="question-3"]:checked'),function(){
   if($(this).val()==questions[3].correctAnswer){
     console.log('bananas3');
@@ -160,6 +150,7 @@ $.each($('input[name="question-3"]:checked'),function(){
     incorrect++;
   }
     });
+
 $.each($('input[name="question-4"]:checked'),function(){
   if($(this).val()==questions[4].correctAnswer){
     console.log('bananas4');
@@ -169,132 +160,11 @@ $.each($('input[name="question-4"]:checked'),function(){
   }
     });
 
+    // Define the total incorrect variable
     var totalIncorrect = (5-correct);
 
+    // Print the correct/incorrect numbers to their respective divs
     $("#correctStats").html("<h2> Correct Answers: </br> <hr>"+correct+"</h2>");
     $("#incorrectStats").html("<h2> Incorrect Answers: </br> <hr>"+totalIncorrect+"</h2>");
 
   }
-
-
-
-
-
-
-
-// function gamePlay() {
-
-//     if($('input[name="question-2"]:checked')==questions[2].correctAnswer){
-//       console.log('bananas');
-//       correct++;
-//     } else {
-//       console.log("nobananas");
-//       incorrect++;
-//     }
-
-
-//   $.each($('input[name="question-0"]:checked'),function(){
-//     if($(this).val()==questions[0].correctAnswer){
-//       console.log('bananas');
-//       correct++;
-//     } else {
-//       incorrect++;
-//     }
-//       });
-//   $.each($('input[name="question-1"]:checked'),function(){
-//     if($(this).val()==questions[1].correctAnswer){
-//       correct++;
-//     } else {
-//       incorrect++;
-//     }
-//       });
-//   $.each($('input[name="question-2"]:checked'),function(){
-//     if($(this).val()==questions[2].correctAnswer){
-//       correct++;
-//     } else {
-//       incorrect++;
-//     }
-//       });
-//   $.each($('input[name="question-3"]:checked'),function(){
-//     if($(this).val()==questions[3].correctAnswer){
-//       correct++;
-//     } else {
-//       incorrect++;
-//     }
-//       });
-//   $.each($('input[name="question-4"]:checked'),function(){
-//     if($(this).val()==questions[4].correctAnswer){
-//       correct++;
-//     } else {
-//       incorrect++;
-//     }
-//       });
-//     }
-
-// //   // Display game statistics
-// //   document.getElementById("questionBoard").style.display = "none";
-// //   document.getElementById("endGameStats").style.display = "inline";
-
-// //   $("#correctStats").append("<h2>"+correctCounter+"</h2>");
-// //   $("#incorrectStats").append("<h2>"+incorrectCounter+"</h2>");
-  
-
-// // }
-
-
-
-// // function timeExpired() {
-// //   document.getElementById("question").innerHTML = "Times up!";
-// //   document.getElementById("allAnswers").style.display = "none";
-// //   document.getElementById("correctAnswer").innerHTML = "The correct answer was:  " + questions[i].correctAnswer;
-// //   document.getElementById("imageArea").innerHTML = questions[i].questionImage;
-// // }
-
-// // function checkAnswer() {
-// //     if (this.questions.correctAnswer ===)
-
-// // }
-
-// // WORKFLOW
-// // ===================================================================================
-
-// // Timer Loop
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// for (i = 0; i < questionsLength; i++) {
-
-// // Start timer loop
-// gameTimer();
-
-// // Question Loop
-// document.getElementById("question").innerHTML = questions[i].question;
-
-// // Answer Loop
-// document.getElementById("answer1").innerHTML = questions[i].answers[0];
-// document.getElementById("answer2").innerHTML = questions[i].answers[1];
-// document.getElementById("answer3").innerHTML = questions[i].answers[2];
-// document.getElementById("answer4").innerHTML = questions[i].answers[3];
-
-// $("#test").html(questions[i].questionImage);
-
-// console.log(questions[i].correctAnswer);
-
-// }
-
-// console.log(questions);
