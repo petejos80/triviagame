@@ -117,16 +117,14 @@ function endGame() {
   // Check the right/wrong status of each answer
   $.each($('input[name="question-0"]:checked'),function(){
   if($(this).val()==questions[0].correctAnswer){
-    console.log('bananas0');
     correct++;
   } else {
     incorrect++;
   }
     });
-    
+
 $.each($('input[name="question-1"]:checked'),function(){
   if($(this).val()==questions[1].correctAnswer){
-    console.log('bananas1');
     correct++;
   } else {
     incorrect++;
@@ -135,7 +133,6 @@ $.each($('input[name="question-1"]:checked'),function(){
 
 $.each($('input[name="question-2"]:checked'),function(){
   if($(this).val()==questions[2].correctAnswer){
-    console.log('bananas2');
     correct++;
   } else {
     incorrect++;
@@ -144,7 +141,6 @@ $.each($('input[name="question-2"]:checked'),function(){
 
 $.each($('input[name="question-3"]:checked'),function(){
   if($(this).val()==questions[3].correctAnswer){
-    console.log('bananas3');
     correct++;
   } else {
     incorrect++;
@@ -153,7 +149,6 @@ $.each($('input[name="question-3"]:checked'),function(){
 
 $.each($('input[name="question-4"]:checked'),function(){
   if($(this).val()==questions[4].correctAnswer){
-    console.log('bananas4');
     correct++;
   } else {
     incorrect++;
